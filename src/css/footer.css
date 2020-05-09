@@ -1,0 +1,26 @@
+.loginFooter {
+  background-color: slategrey;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+
+.loginFooter span {
+  cursor: pointer;
+  margin-left: 10px;
+  padding: 10px;
+}
+
+@media screen and (orientation: portrait) {
+  .loginFooter {
+    height: 8vmax;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  .loginFooter {
+    height: 8vmin;
+  }
+}

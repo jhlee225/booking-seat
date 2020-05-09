@@ -1,0 +1,53 @@
+@import "reset.css";
+@import "header.css";
+@import "menu.css";
+@import "login.css";
+@import "seats.css";
+@import "footer.css";
+
+@media screen and (orientation: portrait) {
+  body {
+    font-family: sans-serif;
+    width: 100vmin;
+    height: 100vmax;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  body {
+    font-family: sans-serif;
+    width: 100vmax;
+    height: 100vmin;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+@media screen and (orientation: portrait) {
+  .App {
+    height: 87vmax;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  .App {
+    height: 87vmin;
+  }
+}
+.App {
+  background: linear-gradient(
+      to top,
+      slategrey,
+      rgb(115, 135, 155, 0.5) 1%,
+      rgb(115, 135, 155, 0.5) 99%,
+      slategrey
+    ),
+    url("./images/book.jpg");
+  background-position: center;
+  background-size: 100% 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
