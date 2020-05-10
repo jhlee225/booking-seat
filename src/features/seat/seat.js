@@ -8,11 +8,6 @@ export function Seats() {
       <div className="seats">
         <BlankRow />
         <SeatRow />
-        <SeatRow />
-        <BlankRow />
-        <BlankRow />
-        <SeatRow />
-        <SeatRow />
         <BlankRow />
       </div>
     </>
@@ -23,17 +18,6 @@ function SeatRow() {
   return (
     <div className="row">
       <div className="blank"></div>
-      <Seat />
-      <Seat />
-      <Seat />
-      <Seat />
-      <Seat />
-      <div className="blank"></div>
-      <div className="blank"></div>
-      <Seat />
-      <Seat />
-      <Seat />
-      <Seat />
       <Seat />
       <div className="blank"></div>
     </div>
@@ -62,16 +46,26 @@ function BlankRow() {
 }
 
 function Seat(props) {
-  const isIn = Math.floor(Math.random() * 2);
+  const isIn1 = true;
+  const isIn2 = false;
   const isLogin = useSelector(selectIsLogin);
 
   return (
-    <Link to={isLogin ? "/Seat" : "/Login"}>
-      {isIn ? (
-        <div className="seat userIn"> 좌석</div>
-      ) : (
-        <div className="seat"> 좌석</div>
-      )}
-    </Link>
+    <>
+      <Link to={isLogin ? "/Time" : "/Login"}>
+        {isIn1 ? (
+          <div className="seat userIn"> 좌석</div>
+        ) : (
+          <div className="seat"> 좌석</div>
+        )}
+      </Link>
+      <Link to={isLogin ? "/Time" : "/Login"}>
+        {isIn2 ? (
+          <div className="seat userIn"> 좌석</div>
+        ) : (
+          <div className="seat"> 좌석</div>
+        )}
+      </Link>
+    </>
   );
 }

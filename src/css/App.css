@@ -2,7 +2,10 @@
 @import "header.css";
 @import "menu.css";
 @import "login.css";
+@import "signUp.css";
 @import "seats.css";
+@import "book.css";
+@import "time.css";
 @import "footer.css";
 
 @media screen and (orientation: portrait) {
@@ -25,6 +28,7 @@ a {
   text-decoration: none;
   color: white;
 }
+
 @media screen and (orientation: portrait) {
   .App {
     height: 87vmax;

@@ -1,31 +1,34 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-export const counterSlice = createSlice({
-  name: "counter",
+export const bookSlice = createSlice({
+  name: "book",
   initialState: {
-    value: 0,
+    name: "",
+    phone: "",
+    date: null,
+    time: null,
   },
   reducers: {
-    increment: (state) => {
-      state.value += 1;
+    setName: (state, action) => {
+      state.name = action.payload.name;
     },
-    decrement: (state) => {
-      state.value -= 1;
+    setPhone: (state, action) => {
+      state.phone = action.payload.phone;
     },
-    incrementByAmount: (state, action) => {
-      state.value += action.payload;
+    setDate: (state, action) => {
+      state.date = action.payload.date;
+    },
+    setTime: (state, action) => {
+      state.time = action.payload.time;
     },
   },
 });
 
-export const { increment, decrement, incrementByAmount } = counterSlice.actions;
+export const { setDate, setName, setPhone, setTime } = bookSlice.actions;
 
-export const incrementAsync = (amount) => (dispatch) => {
-  setTimeout(() => {
-    dispatch(incrementByAmount(amount));
-  }, 1000);
-};
+export const selectName = (state) => state.book.name;
+export const selectPhone = (state) => state.book.phone;
+export const selectDate = (state) => state.book.date;
+export const selectTime = (state) => state.book.time;
 
-export const selectCount = (state) => state.counter.value;
-
-export default counterSlice.reducer;
+export default bookSlice.reducer;

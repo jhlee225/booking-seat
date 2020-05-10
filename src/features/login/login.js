@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setId, setPw } from "./loginSlice";
 import { setIsLogin } from "../menu/menuSlice";
 export function Login() {
   const dispatch = useDispatch();
+  useEffect(() => {
+    return function cleanUp() {
+      dispatch(setId({ id: null }));
+      dispatch(setPw({ pw: null }));
+    };
+  });
   return (
     <div className="loginWrap">
       <div className="login">
@@ -34,7 +40,9 @@ export function Login() {
             로그인
           </div>
         </Link>
-        <div className="signUp btn">회원가입</div>
+        <Link to="/SignUp">
+          <div className="signUp btn">회원가입</div>
+        </Link>
       </div>
     </div>
   );

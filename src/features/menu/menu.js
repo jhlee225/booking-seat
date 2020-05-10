@@ -21,9 +21,14 @@ export function Menu() {
           </div>
         </Link>
       ) : (
-        <Link to="/Login">
-          <div className="menuBtn">로그인</div>
-        </Link>
+        <>
+          <Link to="/Login">
+            <div className="menuBtn">로그인</div>
+          </Link>
+          <Link to="/SignUp">
+            <div className="menuBtn">회원가입</div>
+          </Link>
+        </>
       )}
     </div>
   );

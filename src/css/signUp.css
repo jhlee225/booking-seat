@@ -1,0 +1,13 @@
+.signUpBtns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.name,
+.phone {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  margin: 5px 10px;
+}

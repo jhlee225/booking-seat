@@ -3,8 +3,8 @@ import { createSlice } from "@reduxjs/toolkit";
 export const seatSlice = createSlice({
   name: "seat",
   initialState: {
-    floor: null,
-    seats: [],
+    seat: "",
+    time: [],
   },
   reducers: {
     setFloor: (state, action) => {
