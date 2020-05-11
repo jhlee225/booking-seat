@@ -1,17 +1,25 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setId, setPw, setName, setPhone } from "./signupSlice";
+import { selectId, selectPw } from "./signupSlice";
+import axios from "axios";
+
 export function SignUp() {
+  const userId = useSelector(selectId);
+  const userPw = useSelector(selectPw);
   const dispatch = useDispatch();
-  useEffect(() => {
-    return function cleanUp() {
-      dispatch(setName({ name: null }));
-      dispatch(setPhone({ phone: null }));
-      dispatch(setId({ id: null }));
-      dispatch(setPw({ pw: null }));
-    };
-  });
+
+  function sendSignUp() {
+    const url = "/register";
+    const data = { id: userId, pw: userPw };
+    console.log(JSON.stringify(data));
+    axios
+      .post(url, JSON.stringify(data), {
+        headers: { "content-type": "application/json", dataType: "json" },
+      })
+      .then((res) => console.log(res));
+  }
   return (
     <div className="SignUpWrap">
       <div className="signUp">
@@ -53,7 +61,9 @@ export function SignUp() {
           <div className="back btn">취소</div>
         </Link>
         <Link to="/">
-          <div className="signUp btn">가입</div>
+          <div onClick={() => sendSignUp()} className="signUp btn">
+            가입
+          </div>
         </Link>
       </div>
     </div>
