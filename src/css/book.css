@@ -1,8 +1,12 @@
 .time,
-.book {
+.date {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
   margin: 5px 10px;
+}
+.time.inputBox,
+.date.inputBox {
+  width: 70%;
 }

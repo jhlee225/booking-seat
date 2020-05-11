@@ -7,7 +7,7 @@ export function Menu() {
   const isLogin = useSelector(selectIsLogin);
   const dispatch = useDispatch();
   return (
-    <div className="btns">
+    <div className="menubtns">
       <Link to="/Seat">
         <div className="menuBtn">좌석보기</div>
       </Link>

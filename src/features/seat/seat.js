@@ -6,9 +6,10 @@ export function Seats() {
   return (
     <>
       <div className="seats">
-        <BlankRow />
         <SeatRow />
-        <BlankRow />
+        <Link to="/">
+          <div className="back btn">메인메뉴</div>
+        </Link>
       </div>
     </>
   );
@@ -19,27 +20,9 @@ function SeatRow() {
     <div className="row">
       <div className="blank"></div>
       <Seat />
-      <div className="blank"></div>
-    </div>
-  );
-}
-
-function BlankRow() {
-  return (
-    <div className="row">
-      <div className="blank"></div>
-      <div className="blank"></div>
-      <div className="blank"></div>
-      <div className="blank"></div>
-      <div className="blank"></div>
-      <div className="blank"></div>
-      <div className="blank"></div>
-      <div className="blank"></div>
-      <div className="blank"></div>
-      <div className="blank"></div>
-      <div className="blank"></div>
-      <div className="blank"></div>
-      <div className="blank"></div>
+      <Seat />
+      <Seat />
+      <Seat />
       <div className="blank"></div>
     </div>
   );

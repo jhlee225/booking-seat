@@ -39,10 +39,10 @@ export function Booking() {
             onChange={(e) => dispatch(setDate({ date: e.target.value }))}
           />
         </div>
-        <div className="book date">
+        <div className="book time">
           <span>시간</span>
           <input
-            className="date inputBox"
+            className="time inputBox"
             type="time"
             onChange={(e) => dispatch(setTime({ time: e.target.value }))}
           />

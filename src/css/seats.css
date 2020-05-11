@@ -3,8 +3,8 @@
   padding: 20px 5px;
   display: flex;
   background-color: rgb(245, 245, 245, 0.9);
-  width: 75vmax;
   flex-direction: column;
+  margin: 10px;
   align-items: center;
   justify-content: center;
 }
@@ -16,20 +16,19 @@
   align-items: center;
   color: black;
   border: black 0.1vmin solid;
-  width: 8.9vmin;
-  height: 8.9vmin;
+  padding: 15px 10px;
 }
 
 .seat:hover {
-  background: dodgerblue;
+  background: deepskyblue;
 }
 
 .seat.userIn {
-  background-color: orangered;
+  background-color: #f80805;
 }
 
 .seat.userIn:hover {
-  background-color: crimson;
+  background-color: lightcoral;
 }
 
 .blank {
