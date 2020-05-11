@@ -1,16 +1,25 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { setId, setPw } from "./loginSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { setId, setPw, selectId, selectPw } from "./loginSlice";
 import { setIsLogin } from "../menu/menuSlice";
+import axios from "axios";
+
 export function Login() {
+  const userId = useSelector(selectId),
+    userPw = useSelector(selectPw);
   const dispatch = useDispatch();
-  useEffect(() => {
-    return function cleanUp() {
-      dispatch(setId({ id: null }));
-      dispatch(setPw({ pw: null }));
-    };
-  });
+  function sendLogIn() {
+    const url = "/login";
+    const data = { id: userId, pw: userPw };
+    console.log(JSON.stringify(data));
+    axios
+      .post(url, JSON.stringify(data), {
+        headers: { "content-type": "application/json", dataType: "json" },
+      })
+      .then((res) => console.log(res));
+    dispatch(setIsLogin({ isLogin: true }));
+  }
   return (
     <div className="loginWrap">
       <div className="login">
@@ -33,10 +42,7 @@ export function Login() {
       </div>
       <div className="btns">
         <Link to="/">
-          <div
-            className="login btn"
-            onClick={(e) => dispatch(setIsLogin({ isLogin: true }))}
-          >
+          <div className="login btn" onClick={(e) => sendLogIn()}>
             로그인
           </div>
         </Link>
