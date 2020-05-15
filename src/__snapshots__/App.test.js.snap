@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render App 1`] = `
+<div>
+  <header
+    class="loginHeader"
+  >
+    <a
+      href="#/"
+    >
+      <span>
+        좌석 예약 시스템
+      </span>
+    </a>
+  </header>
+  <div
+    class="App"
+  >
+    <div
+      class="menubtns"
+    >
+      <a
+        href="#/Seat"
+      >
+        <div
+          class="menuBtn"
+        >
+          좌석보기
+        </div>
+      </a>
+      <a
+        href="#/Login"
+      >
+        <div
+          class="menuBtn"
+        >
+          로그인
+        </div>
+      </a>
+      <a
+        href="#/SignUp"
+      >
+        <div
+          class="menuBtn"
+        >
+          회원가입
+        </div>
+      </a>
+    </div>
+  </div>
+  <footer
+    class="loginFooter"
+  >
+    <span>
+      FrontEnd 이재혁
+    </span>
+    <span>
+      주태종 BackEnd
+    </span>
+  </footer>
+</div>
+`;

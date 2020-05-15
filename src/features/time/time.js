@@ -1,9 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 export function Time() {
+  const now = new Date();
+  const today = `${now.getFullYear()}-${now.getMonth()}-${now.getDate()}`;
   return (
     <>
       <div className="times">
+        <div>{}번 자리</div>
         <div>현재 예약 현황</div>
         <div>
           <span>날짜 : </span>
@@ -19,26 +22,5 @@ export function Time() {
         </div>
       </div>
     </>
-  );
-}
-
-function BlankRow() {
-  return (
-    <div className="row">
-      <div className="blank"></div>
-      <div className="blank"></div>
-      <div className="blank"></div>
-      <div className="blank"></div>
-      <div className="blank"></div>
-      <div className="blank"></div>
-      <div className="blank"></div>
-      <div className="blank"></div>
-      <div className="blank"></div>
-      <div className="blank"></div>
-      <div className="blank"></div>
-      <div className="blank"></div>
-      <div className="blank"></div>
-      <div className="blank"></div>
-    </div>
   );
 }
