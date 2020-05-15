@@ -1,12 +1,21 @@
 .seats {
   border-radius: 10px;
-  padding: 20px 5px;
+  padding: 10px 15px;
   display: flex;
   background-color: rgb(245, 245, 245, 0.9);
   flex-direction: column;
   margin: 10px;
   align-items: center;
   justify-content: center;
+}
+
+.floorName {
+  margin: 10px;
+}
+
+.seatTable {
+  padding: 20px;
+  margin: 10px;
 }
 
 .seat {
@@ -16,7 +25,9 @@
   align-items: center;
   color: black;
   border: black 0.1vmin solid;
-  padding: 15px 10px;
+  width: 50px;
+  height: 50px;
+  margin: 0.5px;
 }
 
 .seat:hover {
@@ -32,11 +43,12 @@
 }
 
 .blank {
+  width: 51.63px;
+  height: 51.63px;
+  margin: 0.5px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 9vmin;
-  height: 9vmin;
 }
 
 .row {

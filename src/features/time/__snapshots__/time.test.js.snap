@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render Seats 1`] = `
+<div>
+  <div
+    class="times"
+  >
+    <div>
+      번 자리
+    </div>
+    <div>
+      현재 예약 현황
+    </div>
+    <div>
+      <span>
+        날짜 : 
+      </span>
+      <input
+        type="date"
+      />
+    </div>
+    <div
+      class="btns"
+    >
+      <a
+        href="#/Seat"
+      >
+        <div
+          class="back btn"
+        >
+          뒤로가기
+        </div>
+      </a>
+      <a
+        href="#/Book"
+      >
+        <div
+          class="btn"
+        >
+          예약하기
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+`;
